@@ -18,7 +18,7 @@ I love mixing creativity with tech — whether that’s coding smart systems, de
 
 🛠️ Tech Stack
 
-Languages: Python, C++, HTML
+Languages: Python, HTML
 Tools / Engines: Unreal Engine 5, VS Code
 
 Interests: AI systems, game dev, 3D-tech, modeling & design
