@@ -1,82 +1,75 @@
-# 👋 Hi, I'm Nandeni Tiwari
+<h1 align="center">Hi, I'm Nandeni</h1>
 
-###  AI | Python | Unreal Engine | 3D Modeling
-
-I’m a developer exploring the intersection of **technology and creativity**.  
-From building intelligent systems with AI to designing immersive 3D environments in Unreal Engine — I love turning ideas into interactive experiences.
-
-I enjoy mixing logic with imagination — whether that’s coding smart scripts, designing stylized props, or experimenting with new tools.
+<h3 align="center">
+B.Tech CSE Student | Frontend Learner | Creative Developer
+</h3>
 
 ---
 
-##  What I’m Learning & Building
+## About Me
 
- **Artificial Intelligence**  
-- Beginner ML concepts  
-- Smart scripts & experimentation  
-
- **Python Development**  
-- Automation tools  
-- Utilities & small projects  
-
- **Unreal Engine 5**  
-- 3D environments  
-- Game mechanics  
-- Interactive world-building  
-
- **3D Modeling**  
-- Props  
-- Stylized assets  
-- Environment design  
+- B.Tech CSE student exploring software development and UI design
+- Currently learning React, JavaScript, and modern frontend development
+- Interested in building clean, interactive, and visually appealing projects
+- Enjoy solving problems through code and continuously improving my skills
 
 ---
 
-##  Tech Stack
+## Currently Learning
 
-**Languages:**  
-Python | HTML | JavaScript  
-
-**Tools & Engines:**  
-Unreal Engine 5 | VS Code  
-
-**Interests:**  
-AI systems • Game development • 3D tech • Modeling & design  
+- React.js
+- JavaScript
+- Data Structures & Algorithms
+- Responsive Web Design
+- Git & GitHub
 
 ---
 
-##  Goals
+## Tech Stack
 
-- Build an AI-powered mini project  
-- Create a playable UE5 environment  
-- Level up in modeling & animation  
-- Contribute to open-source projects  
-
----
-
-##  Highlight Projects
-
-*(More coming soon!)*  
-
--  **AI Chat Tool** – Interactive Python-based program  
--  **Unreal Engine Environment** – Beginner-level world build  
--  **3D Model Showcase** – Props & environment experiments  
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,python,cpp,git,github,vscode" />
+</p>
 
 ---
 
-##  Connect With Me
+## Featured Projects
 
-LinkedIn:  
-[Click here to view my profile] - https://www.linkedin.com/in/nandeni-tiwari-7588a136b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+### Anime Binge Watchlist
+A modern anime tracking web application with:
+- Watchlist management
+- Favorites system
+- Dark & Light mode
+- Responsive UI
+- Episode progress tracking
+
+### GuardianAngel
+A safety-focused project designed to provide practical assistance and emergency support features.
 
 ---
 
-##  Fun Side of Me
+## GitHub Stats
 
-- I love combining art + code  
-- I enjoy designing digital worlds  
-- Always experimenting with new tech  
-- Turning ideas into interactive experiences  
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Nandeniworks&show_icons=true&theme=tokyonight&hide_border=true" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Nandeniworks&theme=tokyonight&hide_border=true" />
+</p>
 
 ---
 
- *Currently building. Currently learning. Always evolving.*
+## Connect With Me
+
+<p align="center">
+  <a href="https://github.com/Nandeniworks">
+    <img src="https://skillicons.dev/icons?i=github" />
+  </a>
+</p>
+
+---
+
+<p align="center">
+  Learning • Building • Growing
+</p>
