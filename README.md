@@ -1,12 +1,8 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=280&color=gradient&customColorList=12,20,24,30&text=Nandeni%20Tiwari&fontColor=F5EFFF&fontSize=56&fontAlignY=38&desc=AI%20%7C%20Frontend%20%7C%20Unreal%20Engine%20%7C%20Creative%20Developer&descAlignY=58&descSize=22&animation=twinkling" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=260&color=gradient&customColorList=12,20,24,30&text=Nandeni%20Tiwari&fontColor=E9D5FF&fontSize=52&fontAlignY=40&desc=AI%20%7C%20Python%20%7C%20Unreal%20Engine%20%7C%20Creative%20Developer&descAlignY=60&descSize=20&animation=fadeIn" />
 
 <h3 align="center">
-  Creative Developer • Frontend Learner • Unreal Engine Explorer
+Building creative experiences through code, design, and technology
 </h3>
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=24&pause=1000&color=A855F7&center=true&vCenter=true&width=700&lines=Building+interactive+experiences;Learning+AI+%26+Frontend+Development;Exploring+Unreal+Engine+5;Combining+Creativity+with+Code" />
-</p>
 
 ---
 
@@ -30,11 +26,14 @@ I love combining logic with imagination — whether that’s coding smart script
 - React.js & JavaScript
 - Responsive UI design
 - Interactive web experiences
+- Component-based architecture
+- State management & React Hooks
 
 ### Unreal Engine 5
 - 3D environments
 - Game mechanics
 - Interactive world-building
+- Beginner environment design
 
 ### 3D Modeling
 - Props & stylized assets
@@ -50,7 +49,7 @@ I love combining logic with imagination — whether that’s coding smart script
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Nandeniworks&theme=discord&no-frame=true&row=1&column=6" />
+  Unreal Engine 5 • UI/UX • Creative Development • Problem Solving
 </p>
 
 ---
@@ -61,43 +60,9 @@ I love combining logic with imagination — whether that’s coding smart script
 - Create immersive Unreal Engine environments
 - Improve frontend and UI/UX skills
 - Learn advanced React concepts
+- Strengthen DSA and problem-solving skills
 - Contribute to open-source projects
 - Blend creativity with technology in meaningful projects
-
----
-
-## Highlight Projects
-
-### Anime Binge Watchlist
-A modern anime tracking web application with:
-- Watchlist & favorites system
-- Dark/Light theme
-- Responsive UI
-- Episode progress tracking
-
-### GuardianAngel
-A safety-focused project designed to provide practical support and emergency assistance features.
-
-### Creative Tech Experiments
-Small experimental projects involving:
-- UI design
-- AI concepts
-- Interactive interfaces
-- 3D environments
-
----
-
-## GitHub Stats
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Nandeniworks&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=A855F7" />
-  
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nandeniworks&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A855F7" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=Nandeniworks&theme=tokyonight&hide_border=true&ring=A855F7&fire=A855F7&currStreakLabel=C084FC" />
-</p>
 
 ---
 
@@ -125,15 +90,5 @@ Small experimental projects involving:
 ---
 
 <p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Nandeniworks&label=Profile%20Views&color=a855f7&style=for-the-badge" />
-</p>
-
----
-
-<p align="center">
-  Currently Building • Currently Learning • Always Evolving
+  <img src="https://readme-typing-svg.herokuapp.com?color=A855F7&center=true&vCenter=true&width=600&lines=Currently+Building+%E2%80%A2+Currently+Learning+%E2%80%A2+Always+Evolving;Frontend+%2B+Creative+Tech+Explorer;Learning+Unreal+Engine+and+AI+Development;Exploring+DSA+and+Creative+Coding" />
 </p>
