@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 430" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120622" />
+      <stop offset="50%" stop-color="#160829" />
+      <stop offset="100%" stop-color="#0d0417" />
+    </linearGradient>
+
+    <linearGradient id="aboutBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="quoteBoxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e0b3b" />
+      <stop offset="100%" stop-color="#130626" />
+    </linearGradient>
+
+    <filter id="neonAboutGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .window-header {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .body-text {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      fill: #e2d4f0;
+    }
+    .quote-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 12.5px;
+      fill: #f5d0fe;
+    }
+    .highlight {
+      fill: #f472b6;
+      font-weight: 600;
+    }
+    .accent {
+      fill: #c084fc;
+      font-weight: 600;
+    }
+  </style>
+
+  <!-- Outer Neon Glow Frame -->
+  <rect x="2" y="2" width="376" height="426" rx="12" fill="none" stroke="url(#aboutBorder)" stroke-width="1.8" filter="url(#neonAboutGlow)" />
+  <!-- Card Background -->
+  <rect x="3" y="3" width="374" height="424" rx="11" fill="url(#aboutBg)" />
+
+  <!-- Window Header Bar -->
+  <path d="M 3,14 A 11,11 0 0,1 14,3 L 366,3 A 11,11 0 0,1 377,14 L 377,36 L 3,36 Z" fill="#200d3d" />
+  <line x1="3" y1="36" x2="377" y2="36" stroke="#4c1d95" stroke-width="1.2" />
+
+  <!-- Header Title: ☆ About Me -->
+  <text x="18" y="23" class="window-header" fill="#f0abfc">☆ About Me</text>
+
+  <!-- Window Controls (─  □  ✕) -->
+  <g stroke="#f472b6" stroke-width="1.5" fill="none" opacity="0.9">
+    <line x1="320" y1="20" x2="328" y2="20" />
+    <rect x="336" y="16" width="8" height="8" rx="1" />
+    <line x1="352" y1="16" x2="360" y2="24" />
+    <line x1="360" y1="16" x2="352" y2="24" />
+  </g>
+
+  <!-- Main Body Content with Rich Vector Typography -->
+  <g transform="translate(20, 62)" class="body-text">
+    
+    <!-- Paragraph 1 -->
+    <text x="0" y="0">
+      <tspan x="0" dy="0">Hi! I'm <tspan class="highlight">Nandeni</tspan>, a B.Tech CSE student</tspan>
+      <tspan x="0" dy="21">and creative developer who loves building</tspan>
+      <tspan x="0" dy="21">things where <tspan class="accent">technology meets</tspan></tspan>
+      <tspan x="0" dy="21"><tspan class="accent">imagination</tspan>.</tspan>
+    </text>
+
+    <!-- Paragraph 2 -->
+    <text x="0" y="105">
+      <tspan x="0" dy="0">I enjoy experimenting with <tspan class="highlight">AI</tspan>, <tspan class="accent">frontend</tspan></tspan>
+      <tspan x="0" dy="21"><tspan class="accent">development</tspan>, <tspan class="highlight">interactive interfaces</tspan>,</tspan>
+      <tspan x="0" dy="21"><tspan class="accent">3D environments</tspan>, and <tspan class="highlight">creative</tspan></tspan>
+      <tspan x="0" dy="21"><tspan class="highlight">coding</tspan> — basically anything that lets me</tspan>
+      <tspan x="0" dy="21">turn an idea into something people can</tspan>
+      <tspan x="0" dy="21">actually interact with.</tspan>
+    </text>
+
+    <!-- Paragraph 3 -->
+    <text x="0" y="250">
+      <tspan x="0" dy="0">I'm especially interested in creating</tspan>
+      <tspan x="0" dy="21">experiences that aren't just functional,</tspan>
+      <tspan x="0" dy="21">but also <tspan class="accent">visual</tspan>, <tspan class="highlight">engaging</tspan>, and <tspan class="accent">memorable</tspan>.</tspan>
+    </text>
+
+  </g>
+
+  <!-- Glowing Quote Card at Bottom -->
+  <g transform="translate(20, 345)">
+    <rect x="0" y="0" width="340" height="62" rx="8" fill="url(#quoteBoxGrad)" stroke="#a855f7" stroke-width="1.2" stroke-dasharray="2,2" filter="drop-shadow(0 2px 8px rgba(0,0,0,0.6))" />
+    <!-- Quote marks -->
+    <text x="14" y="24" font-family="Georgia, serif" font-size="28" fill="#f472b6" opacity="0.6">“</text>
+    <text x="325" y="55" font-family="Georgia, serif" font-size="28" fill="#f472b6" opacity="0.6">”</text>
+    <!-- Quote text -->
+    <g class="quote-text" text-anchor="middle" transform="translate(170, 26)">
+      <text x="0" y="0">Code gives ideas structure.</text>
+      <text x="0" y="20" fill="#f0abfc">Creativity gives them personality.</text>
+    </g>
+  </g>
+
+  <!-- Ambient Stars -->
+  <text x="350" y="75" font-family="monospace" font-size="11" fill="#c084fc" opacity="0.7">✦</text>
+  <text x="340" y="315" font-family="monospace" font-size="10" fill="#f472b6" opacity="0.7">⋆</text>
+  <text x="15" y="325" font-family="monospace" font-size="12" fill="#e879f9" opacity="0.6">✧</text>
+</svg>

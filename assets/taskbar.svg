@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 48" width="100%" height="100%">
+  <defs>
+    <linearGradient id="taskbarBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#140628" />
+      <stop offset="50%" stop-color="#1a0933" />
+      <stop offset="100%" stop-color="#120524" />
+    </linearGradient>
+
+    <linearGradient id="taskbarBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="30%" stop-color="#7c3aed" />
+      <stop offset="70%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <filter id="taskbarGlow" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .taskbar-text {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+    .cursor-flash {
+      animation: taskCursor 1s step-end infinite;
+    }
+    @keyframes taskCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Base Bar -->
+  <rect x="2" y="2" width="1196" height="44" rx="8" fill="url(#taskbarBg)" stroke="url(#taskbarBorder)" stroke-width="1.6" filter="url(#taskbarGlow)" />
+
+  <!-- Left: Currently Building • Currently Learning • Always Evolving -->
+  <g transform="translate(25, 29)" class="taskbar-text">
+    <!-- Saturn Planet Icon -->
+    <g transform="translate(0, -6)">
+      <circle cx="0" cy="0" r="7" fill="#a855f7" />
+      <ellipse cx="0" cy="0" rx="14" ry="3.5" fill="none" stroke="#f472b6" stroke-width="1.4" transform="rotate(-20 0 0)" />
+    </g>
+
+    <!-- Star & Text -->
+    <text x="25" y="0" fill="#f0abfc">✦</text>
+    <text x="44" y="0" fill="#e9d5ff">
+      Currently Building <tspan fill="#f472b6">•</tspan> Currently Learning <tspan fill="#f472b6">•</tspan> <tspan fill="#ffffff">Always Evolving</tspan>
+    </text>
+    <!-- Glowing Terminal Block Cursor -->
+    <rect x="525" y="-12" width="8" height="15" fill="#f472b6" class="cursor-flash" />
+  </g>
+
+  <!-- Right: 20:42  📶  🔋 -->
+  <g transform="translate(1100, 29)" class="taskbar-text" fill="#e9d5ff">
+    <!-- Clock -->
+    <text x="0" y="0" fill="#f5d0fe" font-weight="700">20:42</text>
+    
+    <!-- Wi-Fi Icon -->
+    <g transform="translate(48, -4)" stroke="#c084fc" stroke-width="1.5" fill="none">
+      <path d="M 0,2 A 12,12 0 0,1 14,2" />
+      <path d="M 2.5,5 A 8,8 0 0,1 11.5,5" />
+      <circle cx="7" cy="8" r="1" fill="#f472b6" />
+    </g>
+
+    <!-- Battery Icon -->
+    <g transform="translate(74, -10)">
+      <rect x="0" y="0" width="18" height="10" rx="2" fill="none" stroke="#a855f7" stroke-width="1.2" />
+      <rect x="18" y="2.5" width="2" height="5" rx="0.5" fill="#a855f7" />
+      <!-- Battery level bars (full) -->
+      <rect x="2" y="2" width="13" height="6" rx="1" fill="#4ade80" />
+    </g>
+  </g>
+</svg>

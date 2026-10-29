@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" width="100%" height="100%">
+  <defs>
+    <linearGradient id="langBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120622" />
+      <stop offset="50%" stop-color="#160829" />
+      <stop offset="100%" stop-color="#0d0417" />
+    </linearGradient>
+
+    <linearGradient id="langBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <filter id="neonLangGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="donutGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .window-header {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .legend-name {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      fill: #e9d5ff;
+    }
+    .legend-pct {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      fill: #f5d0fe;
+    }
+  </style>
+
+  <!-- Outer Neon Glow Frame -->
+  <rect x="2" y="2" width="356" height="226" rx="12" fill="none" stroke="url(#langBorder)" stroke-width="1.8" filter="url(#neonLangGlow)" />
+  <!-- Card Background -->
+  <rect x="3" y="3" width="354" height="224" rx="11" fill="url(#langBg)" />
+
+  <!-- Window Header Bar -->
+  <path d="M 3,14 A 11,11 0 0,1 14,3 L 346,3 A 11,11 0 0,1 357,14 L 357,32 L 3,32 Z" fill="#200d3d" />
+  <line x1="3" y1="32" x2="357" y2="32" stroke="#4c1d95" stroke-width="1.2" />
+
+  <!-- Header Title: ⚙ Most Used Languages -->
+  <text x="18" y="21" class="window-header" fill="#f0abfc">⚙ Most Used Languages</text>
+
+  <!-- Window Controls (─ □ ✕) -->
+  <g stroke="#f472b6" stroke-width="1.5" fill="none" opacity="0.9">
+    <line x1="300" y1="18" x2="308" y2="18" />
+    <rect x="316" y="14" width="8" height="8" rx="1" />
+    <line x1="332" y1="14" x2="340" y2="22" />
+    <line x1="340" y1="14" x2="332" y2="22" />
+  </g>
+
+  <!-- Left Side: Glowing Donut Chart -->
+  <!-- Center: (95, 128), Radius: 54, Hole: 34, Circumference = 2 * PI * 44 = 276.46 -->
+  <g transform="translate(95, 128) rotate(-90)" filter="url(#donutGlow)">
+    <!-- Circumference = 276.5 -->
+    <!-- Python: 35.2% -> 97.3 -->
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#60a5fa" stroke-width="20" stroke-dasharray="97.3 179.2" stroke-dashoffset="0" />
+    <!-- JavaScript: 28.4% -> 78.5 -->
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#facc15" stroke-width="20" stroke-dasharray="78.5 198" stroke-dashoffset="-97.3" />
+    <!-- TypeScript: 18.6% -> 51.4 -->
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#38bdf8" stroke-width="20" stroke-dasharray="51.4 225.1" stroke-dashoffset="-175.8" />
+    <!-- C++: 10.2% -> 28.2 -->
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#c084fc" stroke-width="20" stroke-dasharray="28.2 248.3" stroke-dashoffset="-227.2" />
+    <!-- HTML/CSS: 7.6% -> 21.0 -->
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#f472b6" stroke-width="20" stroke-dasharray="21.0 255.5" stroke-dashoffset="-255.4" />
+    <!-- Donut Hole Cutout -->
+    <circle cx="0" cy="0" r="32" fill="#130626" />
+  </g>
+  <!-- Donut Center Icon -->
+  <text x="95" y="133" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" fill="#f0abfc">✧</text>
+
+  <!-- Right Side: Clean Legend -->
+  <g transform="translate(195, 58)">
+    
+    <!-- Python -->
+    <g transform="translate(0, 10)">
+      <circle cx="0" cy="0" r="4.5" fill="#60a5fa" filter="drop-shadow(0 0 3px #60a5fa)" />
+      <text x="14" y="4" class="legend-name">Python</text>
+      <text x="135" y="4" text-anchor="end" class="legend-pct">35.2%</text>
+    </g>
+
+    <!-- JavaScript -->
+    <g transform="translate(0, 36)">
+      <circle cx="0" cy="0" r="4.5" fill="#facc15" filter="drop-shadow(0 0 3px #facc15)" />
+      <text x="14" y="4" class="legend-name">JavaScript</text>
+      <text x="135" y="4" text-anchor="end" class="legend-pct">28.4%</text>
+    </g>
+
+    <!-- TypeScript -->
+    <g transform="translate(0, 62)">
+      <circle cx="0" cy="0" r="4.5" fill="#38bdf8" filter="drop-shadow(0 0 3px #38bdf8)" />
+      <text x="14" y="4" class="legend-name">TypeScript</text>
+      <text x="135" y="4" text-anchor="end" class="legend-pct">18.6%</text>
+    </g>
+
+    <!-- C++ -->
+    <g transform="translate(0, 88)">
+      <circle cx="0" cy="0" r="4.5" fill="#c084fc" filter="drop-shadow(0 0 3px #c084fc)" />
+      <text x="14" y="4" class="legend-name">C++</text>
+      <text x="135" y="4" text-anchor="end" class="legend-pct">10.2%</text>
+    </g>
+
+    <!-- HTML / CSS -->
+    <g transform="translate(0, 114)">
+      <circle cx="0" cy="0" r="4.5" fill="#f472b6" filter="drop-shadow(0 0 3px #f472b6)" />
+      <text x="14" y="4" class="legend-name">HTML &amp; CSS</text>
+      <text x="135" y="4" text-anchor="end" class="legend-pct">7.6%</text>
+    </g>
+
+  </g>
+
+  <!-- Ambient Micro Star -->
+  <text x="340" y="215" font-family="monospace" font-size="9" fill="#c084fc" opacity="0.6">⋆</text>
+</svg>

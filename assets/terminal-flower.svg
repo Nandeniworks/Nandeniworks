@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 320" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e0618" />
+      <stop offset="50%" stop-color="#120721" />
+      <stop offset="100%" stop-color="#0a0413" />
+    </linearGradient>
+
+    <linearGradient id="titlebarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e0c38" />
+      <stop offset="50%" stop-color="#2a0f4e" />
+      <stop offset="100%" stop-color="#160829" />
+    </linearGradient>
+
+    <linearGradient id="neonBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <radialGradient id="termGlowAura" cx="22%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0e0618" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="neonTermGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="flowerGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur1" />
+      <feGaussianBlur stdDeviation="10" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .mono-font {
+      font-family: 'Consolas', 'Fira Code', 'Courier New', monospace;
+    }
+    .cursor-blink {
+      animation: blink 1s step-end infinite;
+    }
+    .sparkle-anim {
+      animation: twinkle 2.5s ease-in-out infinite alternate;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.3; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1.1); }
+    }
+  </style>
+
+  <!-- Outer Window Glow Frame -->
+  <rect x="2" y="2" width="646" height="316" rx="12" fill="none" stroke="url(#neonBorderGrad)" stroke-width="1.8" filter="url(#neonTermGlow)" />
+  <!-- Window Base Background -->
+  <rect x="3" y="3" width="644" height="314" rx="11" fill="url(#termBg)" />
+
+  <!-- Terminal Titlebar -->
+  <path d="M 3,14 A 11,11 0 0,1 14,3 L 636,3 A 11,11 0 0,1 647,14 L 647,38 L 3,38 Z" fill="url(#titlebarGrad)" />
+  <line x1="3" y1="38" x2="647" y2="38" stroke="#4c1d95" stroke-width="1.2" />
+
+  <!-- Titlebar Content: pwsh ~ -->
+  <g class="mono-font" font-size="12" font-weight="600">
+    <rect x="18" y="14" width="10" height="10" rx="2" fill="#7c3aed" opacity="0.8" />
+    <text x="35" y="23" fill="#e9d5ff">pwsh ~</text>
+  </g>
+
+  <!-- Window Controls (─  □  ✕) in Hot Violet / Cyber Pink -->
+  <g stroke="#f0abfc" stroke-width="1.6" fill="none" opacity="0.9">
+    <!-- Minimize ─ -->
+    <line x1="580" y1="21" x2="590" y2="21" />
+    <!-- Maximize □ -->
+    <rect x="602" y="16" width="10" height="10" rx="1" />
+    <!-- Close ✕ -->
+    <line x1="624" y1="16" x2="634" y2="26" />
+    <line x1="634" y1="16" x2="624" y2="26" />
+  </g>
+
+  <!-- Scanline / Pixel Grid Overlay in Terminal Interior -->
+  <rect x="4" y="39" width="642" height="277" fill="url(#termGlowAura)" />
+
+  <!-- ================= LEFT PANE: PURPLE FLOWER ================= -->
+  <g transform="translate(15, 45)">
+    <!-- ASCII & Pixel Flower Matrix Background -->
+    <g class="mono-font" font-size="7.5" fill="#c084fc" opacity="0.45" letter-spacing="1.2px">
+      <text x="95" y="25" text-anchor="middle">.·:¨¨:·. ✦ .·:¨¨:·.</text>
+      <text x="95" y="37" text-anchor="middle">::░▒▓██▓▒░::</text>
+      <text x="95" y="49" text-anchor="middle">:░▒▓██████▓▒░:</text>
+      <text x="95" y="61" text-anchor="middle">▒▓██████████▓▒</text>
+      <text x="95" y="73" text-anchor="middle">▓████(✿)████▓</text>
+      <text x="95" y="85" text-anchor="middle">▒▓██████████▓▒</text>
+      <text x="95" y="97" text-anchor="middle">:░▒▓██████▓▒░:</text>
+      <text x="95" y="109" text-anchor="middle">::░▒▓██▓▒░::</text>
+      <text x="95" y="121" text-anchor="middle">'·:¨¨:·' ⋆ '·:¨¨:·'</text>
+    </g>
+
+    <!-- Detailed Vector Lotus / Rose in Center of Flower Pane -->
+    <g transform="translate(10, 15) scale(0.44)" filter="url(#flowerGlow)">
+      <!-- Outer Petals -->
+      <g opacity="0.9">
+        <path d="M 200,200 C 160,110 170,50 200,30 C 230,50 240,110 200,200 Z" fill="#9333ea" stroke="#f0abfc" stroke-width="2" />
+        <path d="M 200,200 C 240,120 310,80 330,105 C 320,140 260,180 200,200 Z" fill="#7c3aed" stroke="#f0abfc" stroke-width="2" />
+        <path d="M 200,200 C 270,165 350,175 365,210 C 340,240 265,230 200,200 Z" fill="#9333ea" stroke="#f0abfc" stroke-width="2" />
+        <path d="M 200,200 C 255,240 315,310 290,335 C 255,330 220,260 200,200 Z" fill="#7c3aed" stroke="#f0abfc" stroke-width="2" />
+        <path d="M 200,200 C 225,265 220,345 200,365 C 180,345 175,265 200,200 Z" fill="#9333ea" stroke="#f0abfc" stroke-width="2" />
+        <path d="M 200,200 C 145,240 85,310 110,335 C 145,330 180,260 200,200 Z" fill="#7c3aed" stroke="#f0abfc" stroke-width="2" />
+        <path d="M 200,200 C 130,165 50,175 35,210 C 60,240 135,230 200,200 Z" fill="#9333ea" stroke="#f0abfc" stroke-width="2" />
+        <path d="M 200,200 C 160,120 90,80 70,105 C 80,140 140,180 200,200 Z" fill="#7c3aed" stroke="#f0abfc" stroke-width="2" />
+      </g>
+      <!-- Mid Radiant Petals -->
+      <g transform="rotate(22.5 200 200)" opacity="0.95">
+        <path d="M 200,200 C 170,130 180,80 200,65 C 220,80 230,130 200,200 Z" fill="#c084fc" stroke="#ffffff" stroke-width="1.8" />
+        <path d="M 200,200 C 230,140 285,110 300,128 C 290,155 245,185 200,200 Z" fill="#c084fc" stroke="#ffffff" stroke-width="1.8" />
+        <path d="M 200,200 C 255,175 315,185 328,210 C 310,230 250,220 200,200 Z" fill="#c084fc" stroke="#ffffff" stroke-width="1.8" />
+        <path d="M 200,200 C 240,230 285,285 268,302 C 242,295 215,245 200,200 Z" fill="#c084fc" stroke="#ffffff" stroke-width="1.8" />
+        <path d="M 200,200 C 218,245 215,310 200,325 C 185,310 182,245 200,200 Z" fill="#c084fc" stroke="#ffffff" stroke-width="1.8" />
+        <path d="M 200,200 C 160,230 115,285 132,302 C 158,295 185,245 200,200 Z" fill="#c084fc" stroke="#ffffff" stroke-width="1.8" />
+        <path d="M 200,200 C 145,175 85,185 72,210 C 90,230 150,220 200,200 Z" fill="#c084fc" stroke="#ffffff" stroke-width="1.8" />
+        <path d="M 200,200 C 170,140 115,110 100,128 C 110,155 155,185 200,200 Z" fill="#c084fc" stroke="#ffffff" stroke-width="1.8" />
+      </g>
+      <!-- Core Petals -->
+      <g transform="rotate(45 200 200)">
+        <path d="M 200,200 C 180,150 185,115 200,105 C 215,115 220,150 200,200 Z" fill="#f472b6" />
+        <path d="M 200,200 C 220,160 255,140 265,152 C 258,170 230,190 200,200 Z" fill="#f472b6" />
+        <path d="M 200,200 C 235,185 275,190 282,205 C 270,218 230,212 200,200 Z" fill="#f472b6" />
+        <path d="M 200,200 C 225,218 255,255 242,266 C 224,260 210,230 200,200 Z" fill="#f472b6" />
+        <path d="M 200,200 C 212,230 210,270 200,280 C 190,270 188,230 200,200 Z" fill="#f472b6" />
+        <path d="M 200,200 C 175,218 145,255 158,266 C 176,260 190,230 200,200 Z" fill="#f472b6" />
+        <path d="M 200,200 C 165,185 125,190 118,205 C 130,218 170,212 200,200 Z" fill="#f472b6" />
+        <path d="M 200,200 C 180,160 145,140 135,152 C 142,170 170,190 200,200 Z" fill="#f472b6" />
+      </g>
+      <!-- Center Nucleus Glow -->
+      <circle cx="200" cy="200" r="24" fill="#ffffff" />
+      <circle cx="200" cy="200" r="14" fill="#fdf4ff" />
+    </g>
+
+    <!-- Stem & Glowing Leaves below -->
+    <path d="M 103,195 Q 103,240 108,255" fill="none" stroke="#a855f7" stroke-width="2.5" />
+    <path d="M 103,220 Q 80,210 70,225 Q 90,235 105,225" fill="#7c3aed" stroke="#c084fc" stroke-width="1.2" opacity="0.8" />
+    <path d="M 105,230 Q 130,222 140,235 Q 120,245 106,236" fill="#7c3aed" stroke="#c084fc" stroke-width="1.2" opacity="0.8" />
+
+    <!-- Flower Matrix Text Bottom -->
+    <text x="105" y="258" text-anchor="middle" class="mono-font" font-size="7.5" fill="#f0abfc" opacity="0.6">▓▒░ [NEON_FLOWER.SYS] ░▒▓</text>
+  </g>
+
+  <!-- Vertical Divider in Terminal -->
+  <line x1="220" y1="52" x2="220" y2="295" stroke="#3b0764" stroke-dasharray="3,4" stroke-width="1.2" />
+
+  <!-- ================= RIGHT PANE: PERSONAL SYSTEM PROFILE ================= -->
+  <g transform="translate(235, 55)" class="mono-font">
+    
+    <!-- Header Greeting with Diamond Sparkle -->
+    <text x="5" y="28" font-size="16" font-weight="700" fill="#f3e8ff">
+      Hey, I'm <tspan fill="#f472b6" filter="url(#neonTermGlow)">Nandeni</tspan> <tspan fill="#c084fc">✧</tspan>
+    </text>
+
+    <!-- Star decoration -->
+    <g class="sparkle-anim" transform="translate(290, 15)">
+      <text x="0" y="0" font-size="14" fill="#f0abfc">✦</text>
+      <text x="15" y="10" font-size="9" fill="#e879f9">⋆</text>
+    </g>
+
+    <!-- Profile Key-Value Rows -->
+    <g font-size="12.5" font-weight="500">
+      
+      <!-- Row 1: Role -->
+      <g transform="translate(5, 62)">
+        <text x="0" y="0" fill="#c084fc" font-weight="700">&gt;</text>
+        <text x="18" y="0" fill="#a855f7">role:</text>
+        <text x="85" y="0" fill="#fdf4ff">creative developer</text>
+      </g>
+
+      <!-- Row 2: College -->
+      <g transform="translate(5, 92)">
+        <text x="0" y="0" fill="#c084fc" font-weight="700">&gt;</text>
+        <text x="18" y="0" fill="#a855f7">college:</text>
+        <text x="85" y="0" fill="#e9d5ff">B.Tech CSE</text>
+      </g>
+
+      <!-- Row 3: Focus -->
+      <g transform="translate(5, 122)">
+        <text x="0" y="0" fill="#c084fc" font-weight="700">&gt;</text>
+        <text x="18" y="0" fill="#a855f7">focus:</text>
+        <text x="85" y="0" fill="#fbcfe8">AI <tspan fill="#7c3aed">|</tspan> Frontend <tspan fill="#7c3aed">|</tspan> Unreal Engine</text>
+      </g>
+
+      <!-- Row 4: Vibe -->
+      <g transform="translate(5, 152)">
+        <text x="0" y="0" fill="#c084fc" font-weight="700">&gt;</text>
+        <text x="18" y="0" fill="#a855f7">vibe:</text>
+        <text x="85" y="0" fill="#e9d5ff">code + creativity + pink pixels</text>
+      </g>
+
+      <!-- Row 5: Status -->
+      <g transform="translate(5, 182)">
+        <text x="0" y="0" fill="#c084fc" font-weight="700">&gt;</text>
+        <text x="18" y="0" fill="#a855f7">status:</text>
+        <text x="85" y="0" fill="#a7f3d0">always learning...</text>
+      </g>
+
+    </g>
+
+    <!-- Terminal Command Line Prompt -->
+    <g transform="translate(5, 228)" font-size="12" font-weight="600">
+      <text x="0" y="0" fill="#38bdf8">PS C:\Users\Nandeni&gt;</text>
+      <!-- Blinking Cursor -->
+      <rect x="145" y="-11" width="8" height="14" fill="#f472b6" class="cursor-blink" />
+    </g>
+
+  </g>
+
+  <!-- Ambient Micro Sparkles around window -->
+  <g class="sparkle-anim" fill="#ffffff" opacity="0.7">
+    <circle cx="215" cy="48" r="1.5" />
+    <circle cx="615" cy="275" r="1.5" />
+    <circle cx="35" cy="295" r="1.2" />
+    <text x="618" y="145" font-family="monospace" font-size="10" fill="#e879f9">✧</text>
+    <text x="235" y="278" font-family="monospace" font-size="9" fill="#c084fc">⋆</text>
+  </g>
+</svg>

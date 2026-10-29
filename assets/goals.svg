@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 430" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goalsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120622" />
+      <stop offset="50%" stop-color="#160829" />
+      <stop offset="100%" stop-color="#0d0417" />
+    </linearGradient>
+
+    <linearGradient id="goalsBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <filter id="neonGoalsGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .window-header {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .goal-item {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      fill: #e9d5ff;
+    }
+    .heart-bullet {
+      fill: #f472b6;
+      font-size: 12px;
+    }
+  </style>
+
+  <!-- Outer Neon Glow Frame -->
+  <rect x="2" y="2" width="326" height="426" rx="12" fill="none" stroke="url(#goalsBorder)" stroke-width="1.8" filter="url(#neonGoalsGlow)" />
+  <!-- Card Background -->
+  <rect x="3" y="3" width="324" height="424" rx="11" fill="url(#goalsBg)" />
+
+  <!-- Window Header Bar -->
+  <path d="M 3,14 A 11,11 0 0,1 14,3 L 316,3 A 11,11 0 0,1 327,14 L 327,36 L 3,36 Z" fill="#200d3d" />
+  <line x1="3" y1="36" x2="327" y2="36" stroke="#4c1d95" stroke-width="1.2" />
+
+  <!-- Header Title: 🎯 Goals.exe -->
+  <text x="18" y="23" class="window-header" fill="#f0abfc">🎯 Goals.exe</text>
+
+  <!-- Window Controls (─  □  ✕) -->
+  <g stroke="#f472b6" stroke-width="1.5" fill="none" opacity="0.9">
+    <line x1="270" y1="20" x2="278" y2="20" />
+    <rect x="286" y="16" width="8" height="8" rx="1" />
+    <line x1="302" y1="16" x2="310" y2="24" />
+    <line x1="310" y1="16" x2="302" y2="24" />
+  </g>
+
+  <!-- Goals List with Glowing Purple Hearts -->
+  <g transform="translate(20, 68)" class="goal-item">
+    
+    <!-- Goal 1 -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="0" class="heart-bullet">💜</text>
+      <text x="20" y="0">Build AI-powered applications</text>
+    </g>
+
+    <!-- Goal 2 -->
+    <g transform="translate(0, 42)">
+      <text x="0" y="0" class="heart-bullet">💜</text>
+      <text x="20" y="0">
+        <tspan x="20" dy="0">Create immersive Unreal</tspan>
+        <tspan x="20" dy="16" fill="#c084fc">Engine environments</tspan>
+      </text>
+    </g>
+
+    <!-- Goal 3 -->
+    <g transform="translate(0, 96)">
+      <text x="0" y="0" class="heart-bullet">💜</text>
+      <text x="20" y="0">
+        <tspan x="20" dy="0">Improve frontend and full-stack</tspan>
+        <tspan x="20" dy="16" fill="#c084fc">development skills</tspan>
+      </text>
+    </g>
+
+    <!-- Goal 4 -->
+    <g transform="translate(0, 150)">
+      <text x="0" y="0" class="heart-bullet">💜</text>
+      <text x="20" y="0">Learn advanced React concepts</text>
+    </g>
+
+    <!-- Goal 5 -->
+    <g transform="translate(0, 192)">
+      <text x="0" y="0" class="heart-bullet">💜</text>
+      <text x="20" y="0">
+        <tspan x="20" dy="0">Strengthen DSA and</tspan>
+        <tspan x="20" dy="16" fill="#c084fc">problem-solving skills</tspan>
+      </text>
+    </g>
+
+    <!-- Goal 6 -->
+    <g transform="translate(0, 246)">
+      <text x="0" y="0" class="heart-bullet">💜</text>
+      <text x="20" y="0">
+        <tspan x="20" dy="0">Explore cybersecurity and</tspan>
+        <tspan x="20" dy="16" fill="#c084fc">modern technologies</tspan>
+      </text>
+    </g>
+
+    <!-- Goal 7 -->
+    <g transform="translate(0, 300)">
+      <text x="0" y="0" class="heart-bullet">💜</text>
+      <text x="20" y="0">Contribute to open-source projects</text>
+    </g>
+
+    <!-- Goal 8 -->
+    <g transform="translate(0, 338)">
+      <text x="0" y="0" class="heart-bullet">💜</text>
+      <text x="20" y="0">Blend creativity with technology</text>
+    </g>
+
+  </g>
+
+  <!-- Ambient Star -->
+  <text x="305" y="65" font-family="monospace" font-size="11" fill="#c084fc" opacity="0.6">✧</text>
+  <text x="15" y="415" font-family="monospace" font-size="10" fill="#f472b6" opacity="0.6">⋆</text>
+</svg>

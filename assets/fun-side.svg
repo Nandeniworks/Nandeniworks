@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 270" width="100%" height="100%">
+  <defs>
+    <linearGradient id="funBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120622" />
+      <stop offset="50%" stop-color="#160829" />
+      <stop offset="100%" stop-color="#0d0417" />
+    </linearGradient>
+
+    <linearGradient id="funBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <filter id="neonFunGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .window-header {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .fun-item {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 11.5px;
+      line-height: 1.45;
+      fill: #e9d5ff;
+    }
+    .star-bullet {
+      fill: #f472b6;
+      font-size: 11px;
+    }
+  </style>
+
+  <!-- Outer Neon Glow Frame -->
+  <rect x="2" y="2" width="326" height="266" rx="12" fill="none" stroke="url(#funBorder)" stroke-width="1.8" filter="url(#neonFunGlow)" />
+  <!-- Card Background -->
+  <rect x="3" y="3" width="324" height="264" rx="11" fill="url(#funBg)" />
+
+  <!-- Window Header Bar -->
+  <path d="M 3,14 A 11,11 0 0,1 14,3 L 316,3 A 11,11 0 0,1 327,14 L 327,32 L 3,32 Z" fill="#200d3d" />
+  <line x1="3" y1="32" x2="327" y2="32" stroke="#4c1d95" stroke-width="1.2" />
+
+  <!-- Header Title: 🪄 Fun Side of Me -->
+  <text x="16" y="21" class="window-header" fill="#f0abfc">🪄 Fun Side of Me</text>
+  <!-- Mascot Icon: Cute Cat / Panda -->
+  <text x="305" y="22" font-size="14" text-anchor="end">🐱</text>
+
+  <!-- Content List with Star Bullets -->
+  <g transform="translate(18, 52)" class="fun-item">
+    
+    <!-- Item 1 -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="0" class="star-bullet">✦</text>
+      <text x="16" y="0">I enjoy combining art with technology</text>
+    </g>
+
+    <!-- Item 2 -->
+    <g transform="translate(0, 32)">
+      <text x="0" y="0" class="star-bullet">✦</text>
+      <text x="16" y="0">
+        <tspan x="16" dy="0">Love designing aesthetic and</tspan>
+        <tspan x="16" dy="16" fill="#c084fc">interactive experiences</tspan>
+      </text>
+    </g>
+
+    <!-- Item 3 -->
+    <g transform="translate(0, 78)">
+      <text x="0" y="0" class="star-bullet">✦</text>
+      <text x="16" y="0">Pandas are objectively adorable <tspan font-size="12">🐼</tspan></text>
+    </g>
+
+    <!-- Item 4 -->
+    <g transform="translate(0, 110)">
+      <text x="0" y="0" class="star-bullet">✦</text>
+      <text x="16" y="0">I enjoy exploring virtual worlds</text>
+    </g>
+
+    <!-- Item 5 -->
+    <g transform="translate(0, 142)">
+      <text x="0" y="0" class="star-bullet">✦</text>
+      <text x="16" y="0">Always experimenting with new tools</text>
+    </g>
+
+    <!-- Item 6 -->
+    <g transform="translate(0, 174)">
+      <text x="0" y="0" class="star-bullet">✦</text>
+      <text x="16" y="0">
+        <tspan x="16" dy="0">Interested in creative design and</tspan>
+        <tspan x="16" dy="16" fill="#c084fc">technical problem-solving</tspan>
+      </text>
+    </g>
+
+  </g>
+
+  <!-- Sparkles -->
+  <text x="305" y="250" font-family="monospace" font-size="10" fill="#f472b6" opacity="0.6">✧</text>
+</svg>

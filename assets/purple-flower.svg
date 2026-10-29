@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Background & Petal Gradients -->
+    <radialGradient id="flowerCoreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="25%" stop-color="#f5d0fe" stop-opacity="0.95" />
+      <stop offset="55%" stop-color="#d946ef" stop-opacity="0.8" />
+      <stop offset="85%" stop-color="#8b5cf6" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#3b0764" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="petalGradOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e879f9" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#4c1d95" />
+    </linearGradient>
+
+    <linearGradient id="petalGradInner" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="40%" stop-color="#c084fc" />
+      <stop offset="80%" stop-color="#f0abfc" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+
+    <linearGradient id="petalGradAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonPurpleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="14" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="coreSuperBloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="bloom1" />
+      <feGaussianBlur stdDeviation="8" result="bloom2" />
+      <feGaussianBlur stdDeviation="18" result="bloom3" />
+      <feMerge>
+        <feMergeNode in="bloom3" />
+        <feMergeNode in="bloom2" />
+        <feMergeNode in="bloom1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .sparkle {
+      animation: floatSparkle 3s ease-in-out infinite alternate;
+    }
+    .sparkle-fast {
+      animation: pulseGlow 1.8s ease-in-out infinite alternate;
+    }
+    .petal-layer {
+      transform-origin: 200px 200px;
+      animation: gentleBreathe 4s ease-in-out infinite alternate;
+    }
+    @keyframes floatSparkle {
+      0% { opacity: 0.3; transform: translateY(0px) scale(0.8); }
+      100% { opacity: 1; transform: translateY(-6px) scale(1.2); }
+    }
+    @keyframes pulseGlow {
+      0% { opacity: 0.4; filter: drop-shadow(0 0 2px #d946ef); }
+      100% { opacity: 1; filter: drop-shadow(0 0 10px #f0abfc); }
+    }
+    @keyframes gentleBreathe {
+      0% { transform: scale(0.98); }
+      100% { transform: scale(1.02); }
+    }
+    .ascii-pixel {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 8px;
+      fill: #e879f9;
+      opacity: 0.65;
+      letter-spacing: 1px;
+    }
+  </style>
+
+  <!-- Ambient background glow aura -->
+  <circle cx="200" cy="200" r="160" fill="url(#flowerCoreGlow)" opacity="0.85" />
+
+  <!-- Background ASCII / Pixel Matrix Texture representing the cyber code flower -->
+  <g class="ascii-pixel" text-anchor="middle">
+    <text x="200" y="65">░░▒▓███▓▒░░</text>
+    <text x="200" y="78">░▒███████████▒░</text>
+    <text x="200" y="92">▓████*·.¸¸.·*████▓</text>
+    <text x="200" y="105">█████( ✧ ✿ ✧ )█████</text>
+    <text x="200" y="118">▓████████████████▓</text>
+    <text x="200" y="132">░▒▓████████████▓▒░</text>
+    <text x="200" y="145">░░▒▓████████▓▒░░</text>
+  </g>
+
+  <!-- Flower Group with Petals and Neon Glow -->
+  <g class="petal-layer" filter="url(#neonPurpleGlow)">
+    
+    <!-- Outer Base Leaves / Spores -->
+    <g opacity="0.85">
+      <!-- Outer Petal 1 (Top) -->
+      <path d="M 200,200 C 160,110 170,50 200,30 C 230,50 240,110 200,200 Z" fill="url(#petalGradOuter)" stroke="#f0abfc" stroke-width="1.5" />
+      <!-- Outer Petal 2 (Top Right) -->
+      <path d="M 200,200 C 240,120 310,80 330,105 C 320,140 260,180 200,200 Z" fill="url(#petalGradOuter)" stroke="#f0abfc" stroke-width="1.5" />
+      <!-- Outer Petal 3 (Right) -->
+      <path d="M 200,200 C 270,165 350,175 365,210 C 340,240 265,230 200,200 Z" fill="url(#petalGradOuter)" stroke="#f0abfc" stroke-width="1.5" />
+      <!-- Outer Petal 4 (Bottom Right) -->
+      <path d="M 200,200 C 255,240 315,310 290,335 C 255,330 220,260 200,200 Z" fill="url(#petalGradOuter)" stroke="#f0abfc" stroke-width="1.5" />
+      <!-- Outer Petal 5 (Bottom) -->
+      <path d="M 200,200 C 225,265 220,345 200,365 C 180,345 175,265 200,200 Z" fill="url(#petalGradOuter)" stroke="#f0abfc" stroke-width="1.5" />
+      <!-- Outer Petal 6 (Bottom Left) -->
+      <path d="M 200,200 C 145,240 85,310 110,335 C 145,330 180,260 200,200 Z" fill="url(#petalGradOuter)" stroke="#f0abfc" stroke-width="1.5" />
+      <!-- Outer Petal 7 (Left) -->
+      <path d="M 200,200 C 130,165 50,175 35,210 C 60,240 135,230 200,200 Z" fill="url(#petalGradOuter)" stroke="#f0abfc" stroke-width="1.5" />
+      <!-- Outer Petal 8 (Top Left) -->
+      <path d="M 200,200 C 160,120 90,80 70,105 C 80,140 140,180 200,200 Z" fill="url(#petalGradOuter)" stroke="#f0abfc" stroke-width="1.5" />
+    </g>
+
+    <!-- Mid Petal Layer (Rotated & Offset for Lush Cyber Rose / Lotus) -->
+    <g transform="rotate(22.5 200 200)" opacity="0.95">
+      <path d="M 200,200 C 170,130 180,80 200,65 C 220,80 230,130 200,200 Z" fill="url(#petalGradInner)" stroke="#ffffff" stroke-width="1.2" />
+      <path d="M 200,200 C 230,140 285,110 300,128 C 290,155 245,185 200,200 Z" fill="url(#petalGradInner)" stroke="#ffffff" stroke-width="1.2" />
+      <path d="M 200,200 C 255,175 315,185 328,210 C 310,230 250,220 200,200 Z" fill="url(#petalGradInner)" stroke="#ffffff" stroke-width="1.2" />
+      <path d="M 200,200 C 240,230 285,285 268,302 C 242,295 215,245 200,200 Z" fill="url(#petalGradInner)" stroke="#ffffff" stroke-width="1.2" />
+      <path d="M 200,200 C 218,245 215,310 200,325 C 185,310 182,245 200,200 Z" fill="url(#petalGradInner)" stroke="#ffffff" stroke-width="1.2" />
+      <path d="M 200,200 C 160,230 115,285 132,302 C 158,295 185,245 200,200 Z" fill="url(#petalGradInner)" stroke="#ffffff" stroke-width="1.2" />
+      <path d="M 200,200 C 145,175 85,185 72,210 C 90,230 150,220 200,200 Z" fill="url(#petalGradInner)" stroke="#ffffff" stroke-width="1.2" />
+      <path d="M 200,200 C 170,140 115,110 100,128 C 110,155 155,185 200,200 Z" fill="url(#petalGradInner)" stroke="#ffffff" stroke-width="1.2" />
+    </g>
+
+    <!-- Inner Heart Petals with Hot Pink Accents -->
+    <g transform="rotate(45 200 200)">
+      <path d="M 200,200 C 180,150 185,115 200,105 C 215,115 220,150 200,200 Z" fill="url(#petalGradAccent)" opacity="0.9" />
+      <path d="M 200,200 C 220,160 255,140 265,152 C 258,170 230,190 200,200 Z" fill="url(#petalGradAccent)" opacity="0.9" />
+      <path d="M 200,200 C 235,185 275,190 282,205 C 270,218 230,212 200,200 Z" fill="url(#petalGradAccent)" opacity="0.9" />
+      <path d="M 200,200 C 225,218 255,255 242,266 C 224,260 210,230 200,200 Z" fill="url(#petalGradAccent)" opacity="0.9" />
+      <path d="M 200,200 C 212,230 210,270 200,280 C 190,270 188,230 200,200 Z" fill="url(#petalGradAccent)" opacity="0.9" />
+      <path d="M 200,200 C 175,218 145,255 158,266 C 176,260 190,230 200,200 Z" fill="url(#petalGradAccent)" opacity="0.9" />
+      <path d="M 200,200 C 165,185 125,190 118,205 C 130,218 170,212 200,200 Z" fill="url(#petalGradAccent)" opacity="0.9" />
+      <path d="M 200,200 C 180,160 145,140 135,152 C 142,170 170,190 200,200 Z" fill="url(#petalGradAccent)" opacity="0.9" />
+    </g>
+
+    <!-- Geometric Cyber Linework / Sacred Geometry Petal Ridges -->
+    <g stroke="#ffffff" stroke-width="0.8" opacity="0.75" fill="none">
+      <circle cx="200" cy="200" r="35" stroke="#f5d0fe" stroke-dasharray="3,3" />
+      <circle cx="200" cy="200" r="60" stroke="#d946ef" stroke-dasharray="4,4" />
+      <circle cx="200" cy="200" r="95" stroke="#a855f7" stroke-dasharray="2,6" />
+      <!-- Radial energy lines -->
+      <line x1="200" y1="140" x2="200" y2="70" stroke="#f0abfc" />
+      <line x1="242" y1="158" x2="292" y2="108" stroke="#f0abfc" />
+      <line x1="260" y1="200" x2="330" y2="200" stroke="#f0abfc" />
+      <line x1="242" y1="242" x2="292" y2="292" stroke="#f0abfc" />
+      <line x1="200" y1="260" x2="200" y2="330" stroke="#f0abfc" />
+      <line x1="158" y1="242" x2="108" y2="292" stroke="#f0abfc" />
+      <line x1="140" y1="200" x2="70" y2="200" stroke="#f0abfc" />
+      <line x1="158" y1="158" x2="108" y2="108" stroke="#f0abfc" />
+    </g>
+
+  </g>
+
+  <!-- Glowing Pistil / Nucleus Core -->
+  <g filter="url(#coreSuperBloom)">
+    <circle cx="200" cy="200" r="28" fill="#d946ef" />
+    <circle cx="200" cy="200" r="20" fill="#f0abfc" />
+    <circle cx="200" cy="200" r="12" fill="#ffffff" />
+    <circle cx="200" cy="200" r="5" fill="#fdf4ff" />
+  </g>
+
+  <!-- Orbiting Pixel / Cyber Star Accents -->
+  <g class="sparkle" fill="#ffffff">
+    <!-- Star 1 (Top Left) -->
+    <path d="M 85,90 Q 95,90 95,80 Q 95,90 105,90 Q 95,90 95,100 Q 95,90 85,90 Z" fill="#f5d0fe" filter="url(#coreSuperBloom)" />
+    <!-- Star 2 (Top Right) -->
+    <path d="M 305,75 Q 315,75 315,65 Q 315,75 325,75 Q 315,75 315,85 Q 315,75 305,75 Z" fill="#ffffff" filter="url(#coreSuperBloom)" />
+    <!-- Star 3 (Bottom Left) -->
+    <path d="M 65,300 Q 73,300 73,292 Q 73,300 81,300 Q 73,300 73,308 Q 73,300 65,300 Z" fill="#e879f9" />
+    <!-- Star 4 (Bottom Right) -->
+    <path d="M 320,310 Q 330,310 330,300 Q 330,310 340,310 Q 330,310 330,320 Q 330,310 320,310 Z" fill="#f0abfc" filter="url(#coreSuperBloom)" />
+  </g>
+
+  <g class="sparkle-fast">
+    <!-- Little floating pixels and cross stars -->
+    <rect x="198" y="25" width="4" height="4" fill="#ffffff" />
+    <rect x="365" y="198" width="4" height="4" fill="#f472b6" />
+    <rect x="198" y="375" width="4" height="4" fill="#c084fc" />
+    <rect x="25" y="198" width="4" height="4" fill="#ffffff" />
+    
+    <text x="140" y="70" font-family="'Courier New', monospace" font-size="12" fill="#f0abfc">✧</text>
+    <text x="255" y="68" font-family="'Courier New', monospace" font-size="14" fill="#ffffff">✦</text>
+    <text x="345" y="150" font-family="'Courier New', monospace" font-size="11" fill="#f472b6">⋆</text>
+    <text x="45" y="165" font-family="'Courier New', monospace" font-size="13" fill="#e879f9">✧</text>
+    <text x="340" y="260" font-family="'Courier New', monospace" font-size="12" fill="#c084fc">✦</text>
+    <text x="50" y="250" font-family="'Courier New', monospace" font-size="14" fill="#f0abfc">⋆</text>
+  </g>
+</svg>

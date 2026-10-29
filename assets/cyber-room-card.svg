@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="roomBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#e879f9" />
+    </linearGradient>
+
+    <linearGradient id="textShadowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#090314" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#090314" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#090314" stop-opacity="0.2" />
+    </linearGradient>
+
+    <filter id="neonRoomGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <clipPath id="roomCardClip">
+      <rect x="2" y="2" width="276" height="316" rx="12" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .cyber-title {
+      font-family: 'Montserrat', 'Inter', -apple-system, sans-serif;
+      font-weight: 900;
+      letter-spacing: 2.5px;
+    }
+  </style>
+
+  <!-- Card Base & Outer Glow -->
+  <rect x="2" y="2" width="276" height="316" rx="12" fill="#0c0517" stroke="url(#roomBorderGrad)" stroke-width="1.8" filter="url(#neonRoomGlow)" />
+
+  <!-- Clipped Content -->
+  <g clip-path="url(#roomCardClip)">
+    <!-- Room Illustration -->
+    <image href="cyber_anime_room.jpg" x="0" y="0" width="280" height="320" preserveAspectRatio="xMidYMid slice" />
+
+    <!-- Dark Gradient Scrim on Left for Typography -->
+    <rect x="0" y="0" width="170" height="320" fill="url(#textShadowGrad)" />
+
+    <!-- Top Window Bar Subtle Gradient -->
+    <rect x="0" y="0" width="280" height="32" fill="#130726" opacity="0.8" />
+    <line x1="0" y1="32" x2="280" y2="32" stroke="#6b21a8" stroke-width="1" />
+
+    <!-- Window Dots / Title -->
+    <circle cx="16" cy="16" r="3.5" fill="#f472b6" opacity="0.9" />
+    <circle cx="28" cy="16" r="3.5" fill="#c084fc" opacity="0.9" />
+    <circle cx="40" cy="16" r="3.5" fill="#38bdf8" opacity="0.9" />
+    <text x="264" y="20" text-anchor="end" font-family="monospace" font-size="10" fill="#e9d5ff" opacity="0.8">view.exe</text>
+
+    <!-- Overlay Typography: BUILD EXPLORE CREATE REPEAT 💜 -->
+    <g class="cyber-title" transform="translate(18, 145)" font-size="14.5" fill="#ffffff" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.85))">
+      <text x="0" y="0" fill="#f5d0fe" letter-spacing="3px">BUILD</text>
+      <text x="0" y="28" fill="#e879f9" letter-spacing="3px">EXPLORE</text>
+      <text x="0" y="56" fill="#c084fc" letter-spacing="3px">CREATE</text>
+      <text x="0" y="84" fill="#ffffff" letter-spacing="3px">REPEAT <tspan fill="#f472b6">💜</tspan></text>
+    </g>
+
+    <!-- Ambient Sparkle Dots -->
+    <text x="245" y="65" font-family="monospace" font-size="12" fill="#ffffff" opacity="0.8">✦</text>
+    <text x="210" y="90" font-family="monospace" font-size="10" fill="#f0abfc" opacity="0.7">⋆</text>
+    <text x="235" y="115" font-family="monospace" font-size="14" fill="#e879f9" opacity="0.85">✧</text>
+  </g>
+</svg>
